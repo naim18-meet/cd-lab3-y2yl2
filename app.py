@@ -1,15 +1,13 @@
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 from flask_sqlalchemy import SQLAlchemy
-from flask.ext.session import Session
+#from flask.ext.session import Session
 
 
 app = Flask(__name__)
 app.debug=True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
-sess = Session()
-
 
 
 class Users(db.Model):
@@ -121,5 +119,4 @@ def posts():
 if __name__ == '__main__':
 	app.secret_key = 'super secret key'
 	app.config['SESSION_TYPE'] = 'filesystem'
-	sess.init_app(app)
 	app.run(debug=True)
