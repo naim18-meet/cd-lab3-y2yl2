@@ -24,10 +24,7 @@ class Posts(db.Model):
 	title = db.Column(db.String(100), nullable=False)
 	text = db.Column(db.String(1000), nullable=False)
 
-db.create_all()
-
 @app.route('/')
-
 @app.route('/login_signup')
 def login_signup():
     return render_template('login_signup.html')
