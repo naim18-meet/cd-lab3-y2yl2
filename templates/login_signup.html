@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='stylesheets/login_signup_style.css')}}">
+  <script type="text/javascript" src="login_signup.js"></script>
+	<style>
+		h1{font-size: 50px; color: darkorange}
+		body{background-color: #76a0ef} 
+	</style>
+</head>
+<body>
+
+<!--################################## Modal Signup Form #######################################-->
+<!--############################################################################################-->
+<div class="border">
+<center><img src="../static/images/school_logo.png" width="500" height="400"></center> 
+<center><h1>GALMUN</h1></center>
+
+<center><button onclick="document.getElementById('id01').style.display='block'" style="width:50%;">Sign Up</button></center>
+<br>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="{{url_for('signup')}}" method=post>
+    <div class="container">
+
+      <label><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="first_name" required>
+
+      <label><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="last_name" required>
+
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pwd" required>
+
+      <p>By creating an account you agree to our <a href="#">Terms and Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--###################### PUT THIS PART IN A SEPERATE FILE AND LINK IT ############################-->
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<!-- ###############################################################################################-->
+
+
+<!-- #################################### Modal Login Form #########################################-->
+<!--################################################################################################-->
+
+<center><button onclick="document.getElementById('id02').style.display='block'" style="width:50%;">Login</button></center>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="{{url_for('login')}}" method = 'post'>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/images/mun_logo.png" alt="avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pwd" required>
+        
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<!--###################### PUT THIS PART IN A SEPERATE FILE AND LINK IT ############################-->
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<!-- ###############################################################################################-->
+</div>
+</body>
+</html>

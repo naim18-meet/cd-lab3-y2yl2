@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='stylesheets/members_style.css')}}">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: #66b9bf">
+<ul>
+  <li><a href="{{url_for('home')}}">Home</a></li>
+  <li><a href="{{url_for('post')}}">Post</a></li>
+  <li><a href="{{url_for('sessions')}}">Sessions</a></li>
+  <li><a href="{{url_for('conferences')}}">Conferences</a></li>
+  <li><a class="active" href="{{url_for('members')}}">Members</a></li>
+</ul>
+
+<br>
+<br>
+<br>
+
+<center>
+<div class="border">
+
+<table id="t01" style="width: 100%">
+
+<tr>
+	<th style="text-align: center; font-family: Times; font-size: 30px;">Name</th>
+	<th style="text-align: center; font-family: Times; font-size: 30px;">Email</th>
+</tr>
+
+{% for one_user in users %}
+
+  <tr>
+    <td style="text-align: center">{{ one_user.first_name + " " + one_user.last_name }}</td>
+    <td style="text-align: center">{{ one_user.email }}</td> 
+  </tr>
+
+  {% endfor %}
+
+</table>
+
+</div>
+</center>
+
+</body>
+</html>

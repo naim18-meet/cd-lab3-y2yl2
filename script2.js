@@ -1,1 +1,0 @@
-alert("My favourite movie is Indiana Jones")
