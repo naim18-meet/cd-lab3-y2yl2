@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.debug=True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://vrpvhvllhyasco:febb795e614ed1c0999098b5994fbbac3279df274ef02cb1e23fe1bf059c07c8@ec2-50-16-231-2.compute-1.amazonaws.com:5432/dedpgiv3mf2l6f'
+app.secret_key = 'super secret key'
 db = SQLAlchemy(app)
 
 
@@ -112,8 +113,9 @@ def posts():
 		print(4)
 		print(posts)
 		return render_template('sessions.html', posts=posts)
-
+'''
 if __name__ == '__main__':
 	app.secret_key = 'super secret key'
 	app.config['SESSION_TYPE'] = 'filesystem'
 	app.run(debug=True)
+'''
