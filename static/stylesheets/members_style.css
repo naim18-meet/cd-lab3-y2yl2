@@ -69,3 +69,10 @@ table#t01 th {
     background-color: #f15025;
     color: white;
 }
+
+.logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+}

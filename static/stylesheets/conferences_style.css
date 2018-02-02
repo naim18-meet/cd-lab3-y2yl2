@@ -42,3 +42,10 @@ ul {
     margin:0 auto;
     background-color: white;
 }
+
+.logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+}

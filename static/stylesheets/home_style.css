@@ -47,3 +47,10 @@ ul {
     h1{color: #f15025}
     p{font-size: 24px}
     /* body{background-color: #66b9bf} /* #############Try using #33658A or #86BBD8 or #66b9bf ############# */
+
+.logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+}
