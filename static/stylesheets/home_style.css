@@ -53,5 +53,6 @@ ul {
 }
 
 #name{
-    color: #f15025
+    color: #f15025;
+    text-align: center;
 }
