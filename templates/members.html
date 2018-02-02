@@ -13,12 +13,12 @@
 
 <body style="background-color: #66b9bf">
 <ul>
-  <li><a href="{{url_for('home')}}">Home</a></li>
-  <li><a href="{{url_for('post')}}">Post</a></li>
-  <li><a href="{{url_for('sessions')}}">Updates</a></li>
-  <li><a href="{{url_for('conferences')}}">Conferences</a></li>
-  <li><a class="active" href="{{url_for('members')}}">Members</a></li>
-  <li id="user">Hi {{ user.first_name }}!</li>
+  <li class="li"><a href="{{url_for('home')}}">Home</a></li>
+  <li class="li"><a href="{{url_for('post')}}">Post</a></li>
+  <li class="li"><a href="{{url_for('sessions')}}">Updates</a></li>
+  <li class="li"><a href="{{url_for('conferences')}}">Conferences</a></li>
+  <li class="li"><a class="active" href="{{url_for('members')}}">Members</a></li>
+  <li id="name">Hi {{ user.first_name }}!</li>
   <li style="float: right"><a id="logout_button" href="{{url_for('login_signup')}}">Logout</a></li>
 </ul>
 
