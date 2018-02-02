@@ -18,7 +18,7 @@
   <li class="li"><a href="{{url_for('sessions')}}">Updates</a></li>
   <li class="li"><a href="{{url_for('conferences')}}">Conferences</a></li>
   <li class="li"><a class="active" href="{{url_for('members')}}">Members</a></li>
-  <li id="name" style="border-right: 1px solid #333; font-size: 16px;">Hi {{ user.first_name }}!</li>
+  <li><p style="color: darkorange;"><b>Hi {{ user.first_name}}!</b></p></li>
   <li style="float: right"><a id="logout_button" href="{{url_for('login_signup')}}">Logout</a></li>
 </ul>
 
