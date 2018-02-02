@@ -51,3 +51,7 @@ ul {
 #logout_button:hover {
     background-color: red;
 }
+
+#name{
+    color: #f15025
+}

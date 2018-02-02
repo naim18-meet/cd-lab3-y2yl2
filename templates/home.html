@@ -21,6 +21,7 @@
   <li><a href="{{url_for('sessions')}}">Updates</a></li>
   <li><a href="{{url_for('conferences')}}">Conferences</a></li>
   <li><a href="{{url_for('members')}}">Members</a></li>
+  <li id="user">Hi {{ user.first_name }}!</li>
   <li style="float: right"><a id="logout_button" href="{{url_for('login_signup')}}">Logout</a></li>
 </ul>
 
