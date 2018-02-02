@@ -76,3 +76,17 @@ table#t01 th {
    right:10px;
    top:5px;
 }
+
+#logout_button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: Times;
+}
