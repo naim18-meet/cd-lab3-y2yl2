@@ -79,7 +79,7 @@ def signup():
 @app.route('/login', methods=['GET','POST'])
 def login():
 	if request.method == 'GET':
-		return render_template('home.html', email=email, pwd=pwd)
+		return render_template('login_signup.html', email=email, pwd=pwd)
 
 	elif request.method == 'POST':
 		user = db.session.query(Users).filter_by(email=request.form['email']).first()
