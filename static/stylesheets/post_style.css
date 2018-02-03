@@ -58,12 +58,3 @@ ul {
 #logout_button:hover {
     background-color: red;
 }
-
-#li_user{
-    float: left;
-    border-right: 1px solid #333;
-}
-
-#user:hover{
-    background-color: #333;
-}
