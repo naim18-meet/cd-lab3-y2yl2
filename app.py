@@ -32,26 +32,26 @@ def login_signup():
 
 @app.route('/home')
 def home():
-	return render_template('home.html', user=user)
+	return render_template('home.html', )
 
 @app.route('/post')
 def post():
-	return render_template('post.html', user=user)
+	return render_template('post.html', )
 
 @app.route('/sessions')
 def sessions():
 	posts=Posts.query.all()
-	return render_template('sessions.html', posts=posts, user=user)
+	return render_template('sessions.html', posts=posts, )
 
 @app.route('/conferences')
 def conferences():
-	return render_template('conferences.html', user=user)
+	return render_template('conferences.html', )
 
 @app.route('/members')
 def members():
 	users = Users.query.all()
 	print(users)
-	return render_template('members.html', users=users, user=user)
+	return render_template('members.html', users=users, )
 
 @app.route('/about')
 def about_page():
@@ -85,7 +85,7 @@ def login():
 		user = db.session.query(Users).filter_by(email=request.form['email']).first()
 		if user.pwd == request.form.get('pwd'):
 			session['logged_in'] = True
-			return render_template('home.html',user=user)
+			return render_template('home.html', user=user)
 
 		else:
 			flash('Wrong Password!')
