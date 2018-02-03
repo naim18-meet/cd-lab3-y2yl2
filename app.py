@@ -32,20 +32,20 @@ def login_signup():
 
 @app.route('/home')
 def home():
-	return render_template('home.html')
+	return render_template('home.html', user=user)
 
 @app.route('/post')
 def post():
-	return render_template('post.html')
+	return render_template('post.html', user=user)
 
 @app.route('/sessions')
 def sessions():
 	posts=Posts.query.all()
-	return render_template('sessions.html', posts=posts)
+	return render_template('sessions.html', posts=posts, user=user)
 
 @app.route('/conferences')
 def conferences():
-	return render_template('conferences.html')
+	return render_template('conferences.html', user=user)
 
 @app.route('/members')
 def members():
