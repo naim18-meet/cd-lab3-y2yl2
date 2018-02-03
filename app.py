@@ -51,7 +51,7 @@ def conferences():
 def members():
 	users = Users.query.all()
 	print(users)
-	return render_template('members.html', users=users)
+	return render_template('members.html', users=users, user=user)
 
 @app.route('/about')
 def about_page():
